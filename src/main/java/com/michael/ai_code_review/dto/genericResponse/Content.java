@@ -2,12 +2,11 @@ package com.michael.ai_code_review.dto.genericResponse;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Content {
 
-    private String message;
-
-    public Content(String message) {
-        this.message = message;
-    }
+    private int score;
+    private List<String> recommendation;
 }

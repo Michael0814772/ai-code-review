@@ -4,6 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+###properties configuration
+src/main/resources/application-postgres.properties
+
 ### STS ###
 .apt_generated
 .classpath

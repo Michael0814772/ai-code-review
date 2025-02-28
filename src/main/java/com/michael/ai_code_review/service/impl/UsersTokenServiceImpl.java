@@ -21,6 +21,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import static com.michael.ai_code_review.enums.ResponseMessage.SUCCESSFUL_RESPONSE;
@@ -83,6 +85,13 @@ public class UsersTokenServiceImpl implements UsersTokenService {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
+    @Override
+    public ResponseEntity<List<UsersTokenTable>> allUsers() {
+
+        List<UsersTokenTable> users = new ArrayList<>(usersTokenRepository.findAll());
+        return new ResponseEntity<>(users, HttpStatus.OK);
+    }
+
     private GenericResponse setGenericResponse(LoginResponseDto loginResponseDto) {
 
         GenericResponse genericResponse = new GenericResponse();
@@ -103,7 +112,7 @@ public class UsersTokenServiceImpl implements UsersTokenService {
     private void validateRequiredFields(LoginUserDto loginUserDto) {
 
         if ((loginUserDto.getUsername() == null || loginUserDto.getUsername().trim().isEmpty())
-                || (loginUserDto.getEmail() == null || loginUserDto.getEmail().trim().isEmpty())) {
+                && (loginUserDto.getEmail() == null || loginUserDto.getEmail().trim().isEmpty())) {
             throw new MyCustomException("username or email is required");
         }
     }

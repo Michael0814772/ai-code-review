@@ -17,8 +17,12 @@ public class OpenAiRequestProperties {
     private String model;
     private Boolean store;
     private String role;
+    private String userMessage;
+    private String userMessage2;
     private String authorization;
     private String authorizationKey;
     private HttpMethod post;
     private String url;
+    private String adminRole;
+    private String message;
 }

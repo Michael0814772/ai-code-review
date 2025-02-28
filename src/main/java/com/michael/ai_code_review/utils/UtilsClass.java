@@ -20,25 +20,19 @@ public class UtilsClass {
 
     private final OpenAiCall openAiCall;
 
-    public Object getOpenAiCall(OpenAiRequest openAiRequest, OpenAiRequestProperties openAiRequestProperties, HashMap<String, Boolean> apiCallContainsError) {
+    public HashMap<String, Object> getOpenAiCall(OpenAiRequest openAiRequest, OpenAiRequestProperties openAiRequestProperties) {
 
         HashMap<String, Object> response;
 
         log.info("request - {}", openAiRequest);
 
         try {
-            response = openAiCall.openAiCall(openAiRequest, openAiRequestProperties);
+            response =  openAiCall.openAiCall(openAiRequest, openAiRequestProperties);
             log.info("response gotten - {}", response);
+            return response;
         } catch (Exception e) {
             log.error("Error gotten from calling openapi - {}", e.getMessage());
             throw new MyCustomException(ERROR_FETCHING_DATA.getMessage());
         }
-
-        if (response.containsKey("error")) {
-            apiCallContainsError.put(CONTAINS_ERROR.getMessage(), true);
-            return response;
-        }
-
-        return openAiCall;
     }
 }

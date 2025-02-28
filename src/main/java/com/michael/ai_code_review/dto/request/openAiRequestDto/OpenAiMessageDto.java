@@ -8,8 +8,8 @@ public class OpenAiMessageDto {
     public String role = "user";
     public String content;
 
-    // Constructor
-    public OpenAiMessageDto(String content) {
+    public OpenAiMessageDto(String role, String content) {
+        this.role = role;
         this.content = content;
     }
 }

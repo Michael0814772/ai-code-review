@@ -11,6 +11,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class CustomException {
     private String message;
-    private String code = "400";
+    private int code;
     private LocalDateTime date = LocalDateTime.now();
 }

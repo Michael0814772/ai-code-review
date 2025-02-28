@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class CustomizedException {
 
     private String responseMsg;
-    private String responseCode = "99";
+    private int responseCode;
 }

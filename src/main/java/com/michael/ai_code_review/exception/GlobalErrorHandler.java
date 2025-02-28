@@ -3,6 +3,9 @@ package com.michael.ai_code_review.exception;
 import com.michael.ai_code_review.exception.exceptionMethod.*;
 import com.michael.ai_code_review.exception.methodNotValid.ValidationErrorResponse;
 import com.michael.ai_code_review.exception.methodNotValid.Violation;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.security.SignatureException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
@@ -12,11 +15,15 @@ import org.springframework.dao.InvalidDataAccessResourceUsageException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.AccountStatusException;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingRequestHeaderException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import java.util.ArrayList;
@@ -66,6 +73,24 @@ public class GlobalErrorHandler {
         customException.setMessage(ex.getMessage());
         customException.setCode(FAILURE.getCode());
         return new ResponseEntity<>(customException, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(MalformedJwtException.class)
+    public ResponseEntity<CustomException> myMalformedJwtException(final MalformedJwtException ex) {
+        log.info(ex.toString());
+        CustomException customException = new CustomException();
+        customException.setMessage(ex.getMessage());
+        customException.setCode(FAILURE.getCode());
+        return new ResponseEntity<>(customException, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<CustomException> myIllegalArgumentException(final IllegalArgumentException ex) {
+        log.info(ex.toString());
+        CustomException customException = new CustomException();
+        customException.setMessage("Error while processing your request");
+        customException.setCode(INTERNAL_SERVER_ERROR.getCode());
+        return new ResponseEntity<>(customException, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(NullPointerException.class)
@@ -196,14 +221,14 @@ public class GlobalErrorHandler {
         return new ResponseEntity<>(customException, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<CustomException> handleException(final Exception ex) {
-        log.info(ex.toString());
-        CustomException customException = new CustomException();
-        customException.setMessage(ex.getMessage());
-        customException.setCode(INTERNAL_SERVER_ERROR.getCode());
-        return new ResponseEntity<>(customException, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+//    @ExceptionHandler(Exception.class)
+//    public ResponseEntity<CustomException> handleException(final Exception ex) {
+//        log.info(ex.toString());
+//        CustomException customException = new CustomException();
+//        customException.setMessage(ex.getMessage());
+//        customException.setCode(INTERNAL_SERVER_ERROR.getCode());
+//        return new ResponseEntity<>(customException, HttpStatus.INTERNAL_SERVER_ERROR);
+//    }
 
     @ExceptionHandler(NoClassDefFoundError.class)
     public ResponseEntity<CustomException> handleNoClassDefFoundError(final NoClassDefFoundError ex) {
@@ -212,5 +237,46 @@ public class GlobalErrorHandler {
         customException.setMessage(ex.getMessage());
         customException.setCode(INTERNAL_SERVER_ERROR.getCode());
         return new ResponseEntity<>(customException, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<CustomException> handleSecurityException(Exception exception) {
+        CustomException errorDetail = new CustomException();
+
+        // TODO send this stack trace to an observability tool
+        exception.printStackTrace();
+
+        if (exception instanceof BadCredentialsException) {
+            errorDetail.setMessage("The username or password is incorrect");
+            errorDetail.setCode(INTERNAL_SERVER_ERROR.getCode());
+        }
+
+        if (exception instanceof AccountStatusException) {
+            errorDetail.setMessage("The account is locked");
+            errorDetail.setCode(INTERNAL_SERVER_ERROR.getCode());
+        }
+
+        if (exception instanceof AccessDeniedException) {
+            errorDetail.setMessage("You are not authorized to access this resource");
+            errorDetail.setCode(INTERNAL_SERVER_ERROR.getCode());
+        }
+
+        if (exception instanceof SignatureException) {
+            errorDetail.setMessage("Signature is invalid");
+            errorDetail.setCode(INTERNAL_SERVER_ERROR.getCode());
+        }
+
+        if (exception instanceof ExpiredJwtException) {
+            errorDetail.setMessage("Token has expired");
+            errorDetail.setCode(UNAUTHORIZED_ERROR.getCode());
+            return new ResponseEntity<>(errorDetail, HttpStatus.UNAUTHORIZED);
+        }
+
+        if (errorDetail == null) {
+            errorDetail.setMessage("Unknown internal server error.");
+            errorDetail.setCode(INTERNAL_SERVER_ERROR.getCode());
+        }
+
+        return new ResponseEntity<>(errorDetail, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
