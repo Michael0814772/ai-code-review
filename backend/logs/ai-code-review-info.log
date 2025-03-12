@@ -1,0 +1,166 @@
+HV000001: Hibernate Validator 8.0.1.Final
+Starting AiCodeReviewApplication using Java 23.0.2 with PID 3292 (C:\Users\Micheal A\ideaProjects\ai-code-review\backend\target\classes started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
+The following 1 profile is active: "postgres"
+Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 368 ms. Found 1 JPA repository interface.
+Post-processing PropertySource instances
+Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application-postgres.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+Tomcat initialized with port 8085 (http)
+Initializing ProtocolHandler ["http-nio-8085"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/10.1.24]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 5060 ms
+HHH000412: Hibernate ORM core version 6.5.2.Final
+HHH000026: Second-level cache disabled
+No LoadTimeWeaver setup: ignoring JPA class transformer
+HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f489434
+HikariPool-1 - Start completed.
+HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate is in classpath; If applicable, HQL parser will be used.
+Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ef4e89c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@206b58c5, org.springframework.security.web.context.SecurityContextHolderFilter@24e73bd2, org.springframework.security.web.header.HeaderWriterFilter@3a56ac58, org.springframework.web.filter.CorsFilter@7cc75251, org.springframework.security.web.authentication.logout.LogoutFilter@6ba82d65, com.michael.ai_code_review.filter.JwtAuthenticationFilter@6c1b37a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2409afbd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c0be3d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e62fbfd, org.springframework.security.web.session.SessionManagementFilter@5fac105e, org.springframework.security.web.access.ExceptionTranslationFilter@3658a157, org.springframework.security.web.access.intercept.AuthorizationFilter@6b76b6f9]
+LiveReload server is running on port 35729
+Starting ProtocolHandler ["http-nio-8085"]
+Tomcat started on port 8085 (http) with context path '/ai-code-review'
+Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+Property Source systemProperties refreshed
+Property Source systemEnvironment refreshed
+Property Source random refreshed
+Property Source Config resource 'class path resource [application-postgres.properties]' via location 'optional:classpath:/' refreshed
+Property Source Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' refreshed
+Property Source devtools refreshed
+Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+Started AiCodeReviewApplication in 16.371 seconds (process running for 19.602)
+Initializing Spring DispatcherServlet 'dispatcherServlet'
+Initializing Servlet 'dispatcherServlet'
+Completed initialization in 0 ms
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjM1OSwiZXhwIjoxNzQxNzc4MzU5fQ.nqpOiEFZrRI8k3OzTw1_B5-4bNauBCbxWru7QOINkts
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjM5MiwiZXhwIjoxNzQxNzc4MzkyfQ.k0oboVLIZdPNMHmd_OK3zUed8hh5rd583TOhaGF-Y70
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjQzMSwiZXhwIjoxNzQxNzc4NDMxfQ.ePkJk55Mm4RztniK7eVKWYjjYi2lclte_F4LJdOsIEM
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjU3NywiZXhwIjoxNzQxNzc4NTc3fQ.Rz0eKhXasJ9tCydrhGnCJmLImw719llDJPpkvtR-duA
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzI3MCwiZXhwIjoxNzQxNzc5MjcwfQ.5dujlwdNqVzcIz4rTRk1VFSWu5M3rV5c1G68qQGS8JI
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzMyNywiZXhwIjoxNzQxNzc5MzI3fQ.utOx8TCrbufQZDaUMr_jOtg_pNoROnYO90UUp-D1gS0
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzQxOSwiZXhwIjoxNzQxNzc5NDE5fQ.UEPEnuPWhd9hdcZzF-tl7QSSZx5NCypr00jXpoTyLQQ
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzQ3MywiZXhwIjoxNzQxNzc5NDczfQ.2GQqtDySoUbXee9bMfscndjaZjfvPkYCEFK4uEl5Aus
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzQ5MSwiZXhwIjoxNzQxNzc5NDkxfQ.7ds8v4ke8S1Qx3DwrJzildhL4gntDeMILmIFmzTx1gk
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzUxMywiZXhwIjoxNzQxNzc5NTEzfQ.VtDfYE5cxkmXftWIYl-YpWMGh3qtv2MiE0ZMGV81gIo
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
+HV000001: Hibernate Validator 8.0.1.Final
+Starting AiCodeReviewApplication using Java 23.0.2 with PID 12584 (C:\Users\Micheal A\ideaProjects\ai-code-review\backend\target\classes started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
+The following 1 profile is active: "postgres"
+Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 324 ms. Found 1 JPA repository interface.
+Post-processing PropertySource instances
+Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application-postgres.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+Tomcat initialized with port 8085 (http)
+Initializing ProtocolHandler ["http-nio-8085"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/10.1.24]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 4797 ms
+HHH000412: Hibernate ORM core version 6.5.2.Final
+HHH000026: Second-level cache disabled
+No LoadTimeWeaver setup: ignoring JPA class transformer
+HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d68373
+HikariPool-1 - Start completed.
+HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate is in classpath; If applicable, HQL parser will be used.
+Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34363fb5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@146acaf7, org.springframework.security.web.context.SecurityContextHolderFilter@51e37f2, org.springframework.security.web.header.HeaderWriterFilter@5fac105e, org.springframework.web.filter.CorsFilter@55153570, org.springframework.security.web.authentication.logout.LogoutFilter@17a2c351, com.michael.ai_code_review.filter.JwtAuthenticationFilter@8a6a467, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30061258, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74474e0f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8db32e3, org.springframework.security.web.session.SessionManagementFilter@885d7bd, org.springframework.security.web.access.ExceptionTranslationFilter@1f2d3273, org.springframework.security.web.access.intercept.AuthorizationFilter@36c2c7db]
+LiveReload server is running on port 35729
+Starting ProtocolHandler ["http-nio-8085"]
+Tomcat started on port 8085 (http) with context path '/ai-code-review'
+Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+Property Source systemProperties refreshed
+Property Source systemEnvironment refreshed
+Property Source random refreshed
+Property Source Config resource 'class path resource [application-postgres.properties]' via location 'optional:classpath:/' refreshed
+Property Source Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' refreshed
+Property Source devtools refreshed
+Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+Started AiCodeReviewApplication in 15.469 seconds (process running for 18.249)
+Initializing Spring DispatcherServlet 'dispatcherServlet'
+Initializing Servlet 'dispatcherServlet'
+Completed initialization in 3 ms
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzcyNiwiZXhwIjoxNzQxNzc5NzI2fQ.oVXQz-_KSuJFWMVot-Xr4A5iWI3roBRfznsAdkT7vGo
+request path - /generate
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m55s931ms497µs400ns).
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.

@@ -14,10 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +27,7 @@ public class CodeReviewController {
     private final CodeReviewService reviewService;
     private final UsersTokenService usersTokenService;
 
+    @CrossOrigin
     @PostMapping(path = "/generate", headers = "X-API-VERSION=1")
     public ResponseEntity<?> reviewCode(@Valid @RequestBody CodeReviewRequestDto code) throws JsonProcessingException {
         return reviewService.reviewCode(code);

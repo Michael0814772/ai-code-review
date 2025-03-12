@@ -8,5 +8,5 @@ import java.util.List;
 public class Content {
 
     private int score;
-    private List<String> recommendation;
+    private List<String> recommendations;
 }
