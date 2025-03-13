@@ -1,16 +1,24 @@
 'use client';
 
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-export default function HomePage() {
+export default function HomePage({ token }) {
   const [code, setCode] = useState('');
   const [review, setReview] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const router = useRouter();
 
-  const handleReview = async ({ token }) => {
+  const handleReview = async () => {
+    if (!token) {
+      router.push('/'); // Redirect if no token
+      return;
+    }
+
     setLoading(true);
+
     try {
       const requestData = {
         requestId: '4455576778777',
@@ -28,20 +36,18 @@ export default function HomePage() {
         {
           headers: {
             'Content-Type': 'application/json',
-            Authorization:
-              'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTU5ODI5NSwiZXhwIjoxNzQxNjA0Mjk1fQ.OVBXKj0Hkw5dIo1-1Cb7921-7X1KqaYyehu2o59wlJc',
+            Authorization: `Bearer ${token}`,
             'X-API-VERSION': 1,
           },
         },
       );
       setReview(response.data.data);
-      console.log('Review:', response.data.data);
-      console.log('Review:', review);
+      // console.log('Review:', response.data.data);
+      // console.log('Review:', review);
     } catch (error) {
-      console.error(
-        'Error reviewing code:',
-        error.response?.data || error.message,
-      );
+      if (error.response?.data.code === 401) {
+        router.push('/'); // Redirect to login on 401
+      }
       setError(true);
     } finally {
       setLoading(false);

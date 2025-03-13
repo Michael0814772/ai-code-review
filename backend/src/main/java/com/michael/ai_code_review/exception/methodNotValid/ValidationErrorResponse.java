@@ -1,5 +1,6 @@
 package com.michael.ai_code_review.exception.methodNotValid;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -20,6 +21,6 @@ public class ValidationErrorResponse {
 
     private List<Violation> errors = new ArrayList<>();
 
-    private String time = String.valueOf(LocalDateTime.now());
-
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", timezone = "UTC")
+    private LocalDateTime time = LocalDateTime.now();
 }

@@ -26,15 +26,11 @@ export default function Login({ setToken }) {
           },
         },
       );
-      console.log('response - ' + JSON.stringify(response?.data.data.token));
       const token = response?.data.data.token;
       setToken(token); // Pass the token to the parent component
     } catch (error) {
       setStatusCode(error.response?.status);
       setError(error.response?.data || error.message);
-      console.error(
-        'statusCode - ' + statusCode + ', error - ' + error.message,
-      );
     }
   };
 
@@ -62,7 +58,7 @@ export default function Login({ setToken }) {
           </div>
         )}
         <button
-          className="px-4 py-2 bg-blue-300 text-white rounded-lg hover:bg-blue-700 cursor-pointer transition ease-in duration-300"
+          className="px-4 py-2 bg-blue-300 text-white rounded-md hover:bg-amber-700 cursor-pointer transition ease-in duration-300"
           onClick={handleLogin}
         >
           Login

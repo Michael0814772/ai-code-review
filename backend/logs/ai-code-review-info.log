@@ -1,10 +1,10 @@
 HV000001: Hibernate Validator 8.0.1.Final
-Starting AiCodeReviewApplication using Java 23.0.2 with PID 3292 (C:\Users\Micheal A\ideaProjects\ai-code-review\backend\target\classes started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
+Starting AiCodeReviewApplication using Java 23.0.2 with PID 12452 (C:\Users\Micheal A\ideaProjects\ai-code-review\backend\target\classes started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
 The following 1 profile is active: "postgres"
 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-Finished Spring Data repository scanning in 368 ms. Found 1 JPA repository interface.
+Finished Spring Data repository scanning in 295 ms. Found 1 JPA repository interface.
 Post-processing PropertySource instances
 Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
 Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
@@ -23,13 +23,13 @@ Initializing ProtocolHandler ["http-nio-8085"]
 Starting service [Tomcat]
 Starting Servlet engine: [Apache Tomcat/10.1.24]
 Initializing Spring embedded WebApplicationContext
-Root WebApplicationContext: initialization completed in 5060 ms
+Root WebApplicationContext: initialization completed in 4384 ms
 HHH000412: Hibernate ORM core version 6.5.2.Final
 HHH000026: Second-level cache disabled
 No LoadTimeWeaver setup: ignoring JPA class transformer
 HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
 HikariPool-1 - Starting...
-HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f489434
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11ef82eb
 HikariPool-1 - Start completed.
 HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
@@ -37,7 +37,7 @@ Initialized JPA EntityManagerFactory for persistence unit 'default'
 Hibernate is in classpath; If applicable, HQL parser will be used.
 Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
 Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ef4e89c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@206b58c5, org.springframework.security.web.context.SecurityContextHolderFilter@24e73bd2, org.springframework.security.web.header.HeaderWriterFilter@3a56ac58, org.springframework.web.filter.CorsFilter@7cc75251, org.springframework.security.web.authentication.logout.LogoutFilter@6ba82d65, com.michael.ai_code_review.filter.JwtAuthenticationFilter@6c1b37a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2409afbd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c0be3d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e62fbfd, org.springframework.security.web.session.SessionManagementFilter@5fac105e, org.springframework.security.web.access.ExceptionTranslationFilter@3658a157, org.springframework.security.web.access.intercept.AuthorizationFilter@6b76b6f9]
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@701d0195, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@477d5f44, org.springframework.security.web.context.SecurityContextHolderFilter@3251a78a, org.springframework.security.web.header.HeaderWriterFilter@19f53891, org.springframework.web.filter.CorsFilter@790d1274, org.springframework.security.web.authentication.logout.LogoutFilter@3b68e2e, com.michael.ai_code_review.filter.JwtAuthenticationFilter@6b3d6e60, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79dac27a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a04f6f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1136553b, org.springframework.security.web.session.SessionManagementFilter@732822cf, org.springframework.security.web.access.ExceptionTranslationFilter@6c455788, org.springframework.security.web.access.intercept.AuthorizationFilter@7a29afd5]
 LiveReload server is running on port 35729
 Starting ProtocolHandler ["http-nio-8085"]
 Tomcat started on port 8085 (http) with context path '/ai-code-review'
@@ -51,60 +51,21 @@ Property Source devtools refreshed
 Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
 Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
 Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
-Started AiCodeReviewApplication in 16.371 seconds (process running for 19.602)
+Started AiCodeReviewApplication in 14.682 seconds (process running for 17.234)
 Initializing Spring DispatcherServlet 'dispatcherServlet'
 Initializing Servlet 'dispatcherServlet'
-Completed initialization in 0 ms
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjM1OSwiZXhwIjoxNzQxNzc4MzU5fQ.nqpOiEFZrRI8k3OzTw1_B5-4bNauBCbxWru7QOINkts
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjM5MiwiZXhwIjoxNzQxNzc4MzkyfQ.k0oboVLIZdPNMHmd_OK3zUed8hh5rd583TOhaGF-Y70
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjQzMSwiZXhwIjoxNzQxNzc4NDMxfQ.ePkJk55Mm4RztniK7eVKWYjjYi2lclte_F4LJdOsIEM
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MjU3NywiZXhwIjoxNzQxNzc4NTc3fQ.Rz0eKhXasJ9tCydrhGnCJmLImw719llDJPpkvtR-duA
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzI3MCwiZXhwIjoxNzQxNzc5MjcwfQ.5dujlwdNqVzcIz4rTRk1VFSWu5M3rV5c1G68qQGS8JI
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzMyNywiZXhwIjoxNzQxNzc5MzI3fQ.utOx8TCrbufQZDaUMr_jOtg_pNoROnYO90UUp-D1gS0
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzQxOSwiZXhwIjoxNzQxNzc5NDE5fQ.UEPEnuPWhd9hdcZzF-tl7QSSZx5NCypr00jXpoTyLQQ
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzQ3MywiZXhwIjoxNzQxNzc5NDczfQ.2GQqtDySoUbXee9bMfscndjaZjfvPkYCEFK4uEl5Aus
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzQ5MSwiZXhwIjoxNzQxNzc5NDkxfQ.7ds8v4ke8S1Qx3DwrJzildhL4gntDeMILmIFmzTx1gk
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzUxMywiZXhwIjoxNzQxNzc5NTEzfQ.VtDfYE5cxkmXftWIYl-YpWMGh3qtv2MiE0ZMGV81gIo
+Completed initialization in 3 ms
+request path - /generate
 Closing JPA EntityManagerFactory for persistence unit 'default'
 HikariPool-1 - Shutdown initiated...
 HikariPool-1 - Shutdown completed.
 HV000001: Hibernate Validator 8.0.1.Final
-Starting AiCodeReviewApplication using Java 23.0.2 with PID 12584 (C:\Users\Micheal A\ideaProjects\ai-code-review\backend\target\classes started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
+Starting AiCodeReviewApplication using Java 23.0.2 with PID 15624 (C:\Users\Micheal A\ideaProjects\ai-code-review\backend\target\classes started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
 The following 1 profile is active: "postgres"
 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-Finished Spring Data repository scanning in 324 ms. Found 1 JPA repository interface.
+Finished Spring Data repository scanning in 169 ms. Found 1 JPA repository interface.
 Post-processing PropertySource instances
 Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
 Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
@@ -123,13 +84,13 @@ Initializing ProtocolHandler ["http-nio-8085"]
 Starting service [Tomcat]
 Starting Servlet engine: [Apache Tomcat/10.1.24]
 Initializing Spring embedded WebApplicationContext
-Root WebApplicationContext: initialization completed in 4797 ms
+Root WebApplicationContext: initialization completed in 3480 ms
 HHH000412: Hibernate ORM core version 6.5.2.Final
 HHH000026: Second-level cache disabled
 No LoadTimeWeaver setup: ignoring JPA class transformer
 HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
 HikariPool-1 - Starting...
-HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d68373
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43ba91ed
 HikariPool-1 - Start completed.
 HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
@@ -137,7 +98,7 @@ Initialized JPA EntityManagerFactory for persistence unit 'default'
 Hibernate is in classpath; If applicable, HQL parser will be used.
 Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
 Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34363fb5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@146acaf7, org.springframework.security.web.context.SecurityContextHolderFilter@51e37f2, org.springframework.security.web.header.HeaderWriterFilter@5fac105e, org.springframework.web.filter.CorsFilter@55153570, org.springframework.security.web.authentication.logout.LogoutFilter@17a2c351, com.michael.ai_code_review.filter.JwtAuthenticationFilter@8a6a467, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30061258, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74474e0f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8db32e3, org.springframework.security.web.session.SessionManagementFilter@885d7bd, org.springframework.security.web.access.ExceptionTranslationFilter@1f2d3273, org.springframework.security.web.access.intercept.AuthorizationFilter@36c2c7db]
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16166ef4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@adbcd02, org.springframework.security.web.context.SecurityContextHolderFilter@5d07851d, org.springframework.security.web.header.HeaderWriterFilter@77bde4c6, org.springframework.web.filter.CorsFilter@22f1da58, org.springframework.security.web.authentication.logout.LogoutFilter@1136553b, com.michael.ai_code_review.filter.JwtAuthenticationFilter@5a7ff1ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51f50580, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@224a5400, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b5346c0, org.springframework.security.web.session.SessionManagementFilter@ac9a86d, org.springframework.security.web.access.ExceptionTranslationFilter@26767379, org.springframework.security.web.access.intercept.AuthorizationFilter@6535044]
 LiveReload server is running on port 35729
 Starting ProtocolHandler ["http-nio-8085"]
 Tomcat started on port 8085 (http) with context path '/ai-code-review'
@@ -151,16 +112,307 @@ Property Source devtools refreshed
 Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
 Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
 Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
-Started AiCodeReviewApplication in 15.469 seconds (process running for 18.249)
+Started AiCodeReviewApplication in 15.805 seconds (process running for 17.858)
 Initializing Spring DispatcherServlet 'dispatcherServlet'
 Initializing Servlet 'dispatcherServlet'
-Completed initialization in 3 ms
-request path - /auth/login-user
-login user method...
-username - segun232
-jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTc3MzcyNiwiZXhwIjoxNzQxNzc5NzI2fQ.oVXQz-_KSuJFWMVot-Xr4A5iWI3roBRfznsAdkT7vGo
+Completed initialization in 1 ms
 request path - /generate
-HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m55s931ms497µs400ns).
+request path - /generate
 Closing JPA EntityManagerFactory for persistence unit 'default'
 HikariPool-1 - Shutdown initiated...
 HikariPool-1 - Shutdown completed.
+HV000001: Hibernate Validator 8.0.1.Final
+Starting AiCodeReviewApplication using Java 23.0.2 with PID 9332 (C:\Users\Micheal A\ideaProjects\ai-code-review\backend\target\classes started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
+The following 1 profile is active: "postgres"
+Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 264 ms. Found 1 JPA repository interface.
+Post-processing PropertySource instances
+Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application-postgres.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+Tomcat initialized with port 8085 (http)
+Initializing ProtocolHandler ["http-nio-8085"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/10.1.24]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3979 ms
+HHH000412: Hibernate ORM core version 6.5.2.Final
+HHH000026: Second-level cache disabled
+No LoadTimeWeaver setup: ignoring JPA class transformer
+HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71a69d03
+HikariPool-1 - Start completed.
+HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate is in classpath; If applicable, HQL parser will be used.
+Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7be8427c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65312d09, org.springframework.security.web.context.SecurityContextHolderFilter@779b0896, org.springframework.security.web.header.HeaderWriterFilter@732822cf, org.springframework.web.filter.CorsFilter@77f99e6d, org.springframework.security.web.authentication.logout.LogoutFilter@2de3f1a2, com.michael.ai_code_review.filter.JwtAuthenticationFilter@72351990, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73e11a99, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51f50580, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53a432ce, org.springframework.security.web.session.SessionManagementFilter@6b54433b, org.springframework.security.web.access.ExceptionTranslationFilter@2478b630, org.springframework.security.web.access.intercept.AuthorizationFilter@6cbe5f2f]
+LiveReload server is running on port 35729
+Starting ProtocolHandler ["http-nio-8085"]
+Tomcat started on port 8085 (http) with context path '/ai-code-review'
+Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+Property Source systemProperties refreshed
+Property Source systemEnvironment refreshed
+Property Source random refreshed
+Property Source Config resource 'class path resource [application-postgres.properties]' via location 'optional:classpath:/' refreshed
+Property Source Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' refreshed
+Property Source devtools refreshed
+Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+Started AiCodeReviewApplication in 13.023 seconds (process running for 15.221)
+Initializing Spring DispatcherServlet 'dispatcherServlet'
+Initializing Servlet 'dispatcherServlet'
+Completed initialization in 3 ms
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MTM2MSwiZXhwIjoxNzQxODY3MzYxfQ.d5bKaFIhOyTzxj1UBvy5R2CYYFyVRqQ5K6TFEq6oMPk
+request path - /generate
+request path - /generate
+request path - /generate
+request path - /generate
+request path - /generate
+request path - /generate
+request path - /generate
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MTc5OCwiZXhwIjoxNzQxODY3Nzk4fQ.m7QJeqjDiocfe5eLzzLND_TT0tTNBDharnPjku9rfBw
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MTg0OCwiZXhwIjoxNzQxODY3ODQ4fQ.N7ZAqGGRPH2RdcMHfCEDZy-FPG6-BicID_63u9djhi8
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MTg5MiwiZXhwIjoxNzQxODY3ODkyfQ.fb6C2A1Mj6voeJxYwds6XjKjL83HOHi7jPkpLXB4pEA
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MjMyOSwiZXhwIjoxNzQxODY4MzI5fQ.KqP48qSTn1oDryOdqjGIaKQbw2fulqORTLBNu6aJ5aQ
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MjQ0OSwiZXhwIjoxNzQxODY4NDQ5fQ.ZSPJ1-xU0UQZSNpGCKbNUhLiI4YQsFjDesW2CPMy-Kk
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MjcxMCwiZXhwIjoxNzQxODY4NzEwfQ.y4QegY_7selC-4uxGfAVy8T4-fAgg8P5SLo_DHPjMvM
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2MjgxOCwiZXhwIjoxNzQxODY4ODE4fQ.5hOODn66WcuvJdFf-eQBvEkls6JHH4derK2bGaRhNeM
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NDU4NiwiZXhwIjoxNzQxODcwNTg2fQ.-G2OTnUERmEDSnRtJoMA13CBX5hiDNPkUEWVDLWvvjw
+request path - /generate
+request: CodeReviewRequestDto(messages=[MessageDto(content=@Override
+public ResponseEntity<?> reviewCode(CodeReviewRequestDto reviewRequestDto) throws JsonProcessingException {
+    log.info("request: {}", reviewRequestDto);
+
+    OpenAiRequest openAiRequest = openAiRequestFactory.createRequest(reviewRequestDto);
+
+    HashMap<String, Object> openAiResponse = openAiClient.callOpenAi(openAiRequest);
+
+    // Check for errors
+    if (openAiResponse.containsKey("error")) {
+        return handleErrorResponse(openAiResponse);
+    }
+
+    OpenAiSuccessResponse openAiSuccessResponse = openAiResponseMapper.mapSuccessResponse(openAiResponse);
+    String message = openAiResponseMapper.writeAsString(openAiSuccessResponse.getChoices().get(0).getMessage().getContent());
+
+    // Clean up JSON response
+    message = methodToCleanResponse(message);
+
+    ScoreAndRecommendationMapper scoreAndRecommendationMapper = openAiResponseMapper.extractScoreAndRecommendation(message);
+
+    return buildSuccessResponse(scoreAndRecommendationMapper);
+})], requestId=4455576778777)
+request - OpenAiRequest(model=gpt-4o-mini, store=true, messages=[OpenAiMessageDto(role=user, content=You are a code review assistant. Analyze the code for best practices, performance, and security issues.), OpenAiMessageDto(role=user, content=Review this code and return a JSON object with 'score' (0-100) and 'recommendations with code sample added for each recommendations' (array of suggestions). Return response **strictly** as a JSON object without markdown or formatting. Example: {"score": 85, "recommendations": ["Improve variable names", "Avoid nested loops"] }" Code:@Override
+public ResponseEntity<?> reviewCode(CodeReviewRequestDto reviewRequestDto) throws JsonProcessingException {
+    log.info("request: {}", reviewRequestDto);
+
+    OpenAiRequest openAiRequest = openAiRequestFactory.createRequest(reviewRequestDto);
+
+    HashMap<String, Object> openAiResponse = openAiClient.callOpenAi(openAiRequest);
+
+    // Check for errors
+    if (openAiResponse.containsKey("error")) {
+        return handleErrorResponse(openAiResponse);
+    }
+
+    OpenAiSuccessResponse openAiSuccessResponse = openAiResponseMapper.mapSuccessResponse(openAiResponse);
+    String message = openAiResponseMapper.writeAsString(openAiSuccessResponse.getChoices().get(0).getMessage().getContent());
+
+    // Clean up JSON response
+    message = methodToCleanResponse(message);
+
+    ScoreAndRecommendationMapper scoreAndRecommendationMapper = openAiResponseMapper.extractScoreAndRecommendation(message);
+
+    return buildSuccessResponse(scoreAndRecommendationMapper);
+})])
+open ai call...
+response gotten - {id=chatcmpl-BAarPB7LC9aCup2WGtN51glLV3OW9, object=chat.completion, created=1741864671, model=gpt-4o-mini-2024-07-18, choices=[{index=0, message={role=assistant, content={"score": 75, "recommendations": ["Use ConcurrentHashMap for thread-safety when applicable", "Consider using Optional to avoid potential NullPointerExceptions", "Refactor error handling for better readability and maintainability", "Add validation for input and output objects to enhance security and stability"]}, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}], usage={prompt_tokens=302, completion_tokens=61, total_tokens=363, prompt_tokens_details={cached_tokens=0, audio_tokens=0}, completion_tokens_details={reasoning_tokens=0, audio_tokens=0, accepted_prediction_tokens=0, rejected_prediction_tokens=0}}, service_tier=default, system_fingerprint=fp_06737a9306}
+genericResponse - GenericResponse(code=200, message=Successful, date=2025-03-13T12:17:52.372853200, data=Content(score=75, recommendations=[Use ConcurrentHashMap for thread-safety when applicable, Consider using Optional to avoid potential NullPointerExceptions, Refactor error handling for better readability and maintainability, Add validation for input and output objects to enhance security and stability]))
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NDkyNywiZXhwIjoxNzQxODcwOTI3fQ.j3R1QwDj2rCMfxp3-Hr1zqqVwXXdHJfCD_VnMzeIub8
+request path - /generate
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NTAyNSwiZXhwIjoxNzQxODcxMDI1fQ.Ov-WaGdJFgFulkrOpljLquL4LbvJIZC0BWWfIjpMhho
+request path - /generate
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NTA1NSwiZXhwIjoxNzQxODcxMDU1fQ.CV5Sfm0ntScVGrmATH5IYcT9-nsFQi5Z97ByUi2jwPE
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NTA3OSwiZXhwIjoxNzQxODcxMDc5fQ.obUGvNELesbH68gRdPHTTsI5gMuyQ0TqO2_jx0rbmTE
+request path - /generate
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NTEzOSwiZXhwIjoxNzQxODcxMTM5fQ.PQ6QyfPBwnEwfdCIIQFXF9vtT-nrRlJc2ZO_73LzoHU
+request path - /generate
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NTIwNCwiZXhwIjoxNzQxODcxMjA0fQ.rb0DbXheMvbJdEEoQQtypBr4Vc2NrInmWZA1DKYWqs8
+request path - /generate
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NTI0NywiZXhwIjoxNzQxODcxMjQ3fQ.5mYLrqEqTjoF2hMy25TJDeBtwLPwwwsjAWzLOu9EPT4
+request path - /generate
+request: CodeReviewRequestDto(messages=[MessageDto(content=@Override
+    public ResponseEntity<?> reviewCode(CodeReviewRequestDto reviewRequestDto) throws JsonProcessingException {
+        log.info("request: {}", reviewRequestDto);
+
+        OpenAiRequest openAiRequest = openAiRequestFactory.createRequest(reviewRequestDto);
+
+        HashMap<String, Object> openAiResponse = openAiClient.callOpenAi(openAiRequest);
+
+        // Check for errors
+        if (openAiResponse.containsKey("error")) {
+            return handleErrorResponse(openAiResponse);
+        }
+
+        OpenAiSuccessResponse openAiSuccessResponse = openAiResponseMapper.mapSuccessResponse(openAiResponse);
+        String message = openAiResponseMapper.writeAsString(openAiSuccessResponse.getChoices().get(0).getMessage().getContent());
+
+        // Clean up JSON response
+        message = methodToCleanResponse(message);
+
+        ScoreAndRecommendationMapper scoreAndRecommendationMapper = openAiResponseMapper.extractScoreAndRecommendation(message);
+
+        return buildSuccessResponse(scoreAndRecommendationMapper);
+    })], requestId=4455576778777)
+request - OpenAiRequest(model=gpt-4o-mini, store=true, messages=[OpenAiMessageDto(role=user, content=You are a code review assistant. Analyze the code for best practices, performance, and security issues.), OpenAiMessageDto(role=user, content=Review this code and return a JSON object with 'score' (0-100) and 'recommendations with code sample added for each recommendations' (array of suggestions). Return response **strictly** as a JSON object without markdown or formatting. Example: {"score": 85, "recommendations": ["Improve variable names", "Avoid nested loops"] }" Code:@Override
+    public ResponseEntity<?> reviewCode(CodeReviewRequestDto reviewRequestDto) throws JsonProcessingException {
+        log.info("request: {}", reviewRequestDto);
+
+        OpenAiRequest openAiRequest = openAiRequestFactory.createRequest(reviewRequestDto);
+
+        HashMap<String, Object> openAiResponse = openAiClient.callOpenAi(openAiRequest);
+
+        // Check for errors
+        if (openAiResponse.containsKey("error")) {
+            return handleErrorResponse(openAiResponse);
+        }
+
+        OpenAiSuccessResponse openAiSuccessResponse = openAiResponseMapper.mapSuccessResponse(openAiResponse);
+        String message = openAiResponseMapper.writeAsString(openAiSuccessResponse.getChoices().get(0).getMessage().getContent());
+
+        // Clean up JSON response
+        message = methodToCleanResponse(message);
+
+        ScoreAndRecommendationMapper scoreAndRecommendationMapper = openAiResponseMapper.extractScoreAndRecommendation(message);
+
+        return buildSuccessResponse(scoreAndRecommendationMapper);
+    })])
+open ai call...
+response gotten - {id=chatcmpl-BAb0uzUEjXWO9ZSO7KKnpmtdN3G2F, object=chat.completion, created=1741865260, model=gpt-4o-mini-2024-07-18, choices=[{index=0, message={role=assistant, content={"score": 75, "recommendations": ["Use a more specific exception handling strategy", "Use enums instead of strings for error codes", "Ensure proper logging levels are used", "Encapsulate the response cleaning logic within a dedicated method"]}, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}], usage={prompt_tokens=304, completion_tokens=52, total_tokens=356, prompt_tokens_details={cached_tokens=0, audio_tokens=0}, completion_tokens_details={reasoning_tokens=0, audio_tokens=0, accepted_prediction_tokens=0, rejected_prediction_tokens=0}}, service_tier=default, system_fingerprint=fp_06737a9306}
+genericResponse - GenericResponse(code=200, message=Successful, date=2025-03-13T12:27:40.638180800, data=Content(score=75, recommendations=[Use a more specific exception handling strategy, Use enums instead of strings for error codes, Ensure proper logging levels are used, Encapsulate the response cleaning logic within a dedicated method]))
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NTk0NSwiZXhwIjoxNzQxODcxOTQ1fQ.d9uKybhu8S99iPiexI_gYa_Zc-V9dqn-U0EV6OmmNsc
+request path - /generate
+request: CodeReviewRequestDto(messages=[MessageDto(content={!token ? <Login setToken={setToken} /> : <HomePage token={token} />})], requestId=4455576778777)
+request - OpenAiRequest(model=gpt-4o-mini, store=true, messages=[OpenAiMessageDto(role=user, content=You are a code review assistant. Analyze the code for best practices, performance, and security issues.), OpenAiMessageDto(role=user, content=Review this code and return a JSON object with 'score' (0-100) and 'recommendations with code sample added for each recommendations' (array of suggestions). Return response **strictly** as a JSON object without markdown or formatting. Example: {"score": 85, "recommendations": ["Improve variable names", "Avoid nested loops"] }" Code:{!token ? <Login setToken={setToken} /> : <HomePage token={token} />})])
+open ai call...
+response gotten - {id=chatcmpl-BAbC5y3ryqw7VmOfDhGGKtxdbc23w, object=chat.completion, created=1741865953, model=gpt-4o-mini-2024-07-18, choices=[{index=0, message={role=assistant, content={"score": 75, "recommendations": ["Use more descriptive variable names", "Handle potential null or undefined values"]}, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}], usage={prompt_tokens=127, completion_tokens=27, total_tokens=154, prompt_tokens_details={cached_tokens=0, audio_tokens=0}, completion_tokens_details={reasoning_tokens=0, audio_tokens=0, accepted_prediction_tokens=0, rejected_prediction_tokens=0}}, service_tier=default, system_fingerprint=fp_06737a9306}
+genericResponse - GenericResponse(code=200, message=Successful, date=2025-03-13T12:39:13.834319300, data=Content(score=75, recommendations=[Use more descriptive variable names, Handle potential null or undefined values]))
+request path - /generate
+request: CodeReviewRequestDto(messages=[MessageDto(content={!token ? <Login setToken={setToken} /> : <HomePage token={token} />})], requestId=4455576778777)
+request - OpenAiRequest(model=gpt-4o-mini, store=true, messages=[OpenAiMessageDto(role=user, content=You are a code review assistant. Analyze the code for best practices, performance, and security issues.), OpenAiMessageDto(role=user, content=Review this code and return a JSON object with 'score' (0-100) and 'recommendations with code sample added for each recommendations' (array of suggestions). Return response **strictly** as a JSON object without markdown or formatting. Example: {"score": 85, "recommendations": ["Improve variable names", "Avoid nested loops"] }" Code:{!token ? <Login setToken={setToken} /> : <HomePage token={token} />})])
+open ai call...
+response gotten - {id=chatcmpl-BAbCyx4YYGpYWIwJAqN8HpdWJVYUP, object=chat.completion, created=1741866008, model=gpt-4o-mini-2024-07-18, choices=[{index=0, message={role=assistant, content={"score": 70, "recommendations": ["Improve readability by using consistent indentation", "Ensure token validation before rendering components"]}, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}], usage={prompt_tokens=127, completion_tokens=28, total_tokens=155, prompt_tokens_details={cached_tokens=0, audio_tokens=0}, completion_tokens_details={reasoning_tokens=0, audio_tokens=0, accepted_prediction_tokens=0, rejected_prediction_tokens=0}}, service_tier=default, system_fingerprint=fp_06737a9306}
+genericResponse - GenericResponse(code=200, message=Successful, date=2025-03-13T12:40:08.560510900, data=Content(score=70, recommendations=[Improve readability by using consistent indentation, Ensure token validation before rendering components]))
+request path - /generate
+request: CodeReviewRequestDto(messages=[MessageDto(content={!token ? <Login setToken={setToken} /> : <HomePage token={token} />})], requestId=4455576778777)
+request - OpenAiRequest(model=gpt-4o-mini, store=true, messages=[OpenAiMessageDto(role=user, content=You are a code review assistant. Analyze the code for best practices, performance, and security issues.), OpenAiMessageDto(role=user, content=Review this code and return a JSON object with 'score' (0-100) and 'recommendations with code sample added for each recommendations' (array of suggestions). Return response **strictly** as a JSON object without markdown or formatting. Example: {"score": 85, "recommendations": ["Improve variable names", "Avoid nested loops"] }" Code:{!token ? <Login setToken={setToken} /> : <HomePage token={token} />})])
+open ai call...
+response gotten - {id=chatcmpl-BAbf0wbaELhZF1z4s2DeEK5tWHPVh, object=chat.completion, created=1741867746, model=gpt-4o-mini-2024-07-18, choices=[{index=0, message={role=assistant, content={"score": 70, "recommendations": ["Use clearer variable names for better readability.", "Consider handling the token state in a more secure manner."]}, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}], usage={prompt_tokens=127, completion_tokens=34, total_tokens=161, prompt_tokens_details={cached_tokens=0, audio_tokens=0}, completion_tokens_details={reasoning_tokens=0, audio_tokens=0, accepted_prediction_tokens=0, rejected_prediction_tokens=0}}, service_tier=default, system_fingerprint=fp_06737a9306}
+genericResponse - GenericResponse(code=200, message=Successful, date=2025-03-13T13:09:06.471965400, data=Content(score=70, recommendations=[Use clearer variable names for better readability., Consider handling the token state in a more secure manner.]))
+request path - /generate
+request: CodeReviewRequestDto(messages=[MessageDto(content={!token ? <Login setToken={setToken} /> : <HomePage token={token} />})], requestId=4455576778777)
+request - OpenAiRequest(model=gpt-4o-mini, store=true, messages=[OpenAiMessageDto(role=user, content=You are a code review assistant. Analyze the code for best practices, performance, and security issues.), OpenAiMessageDto(role=user, content=Review this code and return a JSON object with 'score' (0-100) and 'recommendations with code sample added for each recommendations' (array of suggestions). Return response **strictly** as a JSON object without markdown or formatting. Example: {"score": 85, "recommendations": ["Improve variable names", "Avoid nested loops"] }" Code:{!token ? <Login setToken={setToken} /> : <HomePage token={token} />})])
+open ai call...
+response gotten - {id=chatcmpl-BAbf4u618Wo99qsE0jSq1kvhUsGFU, object=chat.completion, created=1741867750, model=gpt-4o-mini-2024-07-18, choices=[{index=0, message={role=assistant, content={"score": 75, "recommendations": ["Improve readability with clearer variable names", "Use strict equality checks", "Add error handling for the Login component"]}, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}], usage={prompt_tokens=127, completion_tokens=35, total_tokens=162, prompt_tokens_details={cached_tokens=0, audio_tokens=0}, completion_tokens_details={reasoning_tokens=0, audio_tokens=0, accepted_prediction_tokens=0, rejected_prediction_tokens=0}}, service_tier=default, system_fingerprint=fp_06737a9306}
+genericResponse - GenericResponse(code=200, message=Successful, date=2025-03-13T13:09:10.301530400, data=Content(score=75, recommendations=[Improve readability with clearer variable names, Use strict equality checks, Add error handling for the Login component]))
+request path - /generate
+request: CodeReviewRequestDto(messages=[MessageDto(content={!token ? <Login setToken={setToken} /> : <HomePage token={token} />})], requestId=4455576778777)
+request - OpenAiRequest(model=gpt-4o-mini, store=true, messages=[OpenAiMessageDto(role=user, content=You are a code review assistant. Analyze the code for best practices, performance, and security issues.), OpenAiMessageDto(role=user, content=Review this code and return a JSON object with 'score' (0-100) and 'recommendations with code sample added for each recommendations' (array of suggestions). Return response **strictly** as a JSON object without markdown or formatting. Example: {"score": 85, "recommendations": ["Improve variable names", "Avoid nested loops"] }" Code:{!token ? <Login setToken={setToken} /> : <HomePage token={token} />})])
+open ai call...
+response gotten - {id=chatcmpl-BAbf6tcfVOENBnkDJLyGkMZYZE8jP, object=chat.completion, created=1741867752, model=gpt-4o-mini-2024-07-18, choices=[{index=0, message={role=assistant, content={"score": 75, "recommendations": ["Improve variable naming for clarity", "Ensure token management is secure", "Consider using a navigation guard to protect the HomePage component"]}, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}], usage={prompt_tokens=127, completion_tokens=39, total_tokens=166, prompt_tokens_details={cached_tokens=0, audio_tokens=0}, completion_tokens_details={reasoning_tokens=0, audio_tokens=0, accepted_prediction_tokens=0, rejected_prediction_tokens=0}}, service_tier=default, system_fingerprint=fp_06737a9306}
+genericResponse - GenericResponse(code=200, message=Successful, date=2025-03-13T13:09:12.653101600, data=Content(score=75, recommendations=[Improve variable naming for clarity, Ensure token management is secure, Consider using a navigation guard to protect the HomePage component]))
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2Nzc4MywiZXhwIjoxNzQxODczNzgzfQ.Q-2M0X4kh4XBkLe4VlVVXeGcyuhkeR6Uw3yXDxnp62g
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2NzgwNCwiZXhwIjoxNzQxODczODA0fQ.XgrE-NwKQD_Uv7bj3_ZXx4m3wZDhRrrgiMC-lJWGIu8
+request path - /generate
+request path - /generate
+request path - /auth/login-user
+login user method...
+username - segun232
+jwtToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWd1bjIzMiIsImlhdCI6MTc0MTg2ODI3MiwiZXhwIjoxNzQxODc0MjcyfQ.iX7ibsKnXA7N4Yuihrg55XAwhSBK96V7_d_lZUH5h7Y
