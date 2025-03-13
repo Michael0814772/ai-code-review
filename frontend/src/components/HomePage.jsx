@@ -11,6 +11,10 @@ export default function HomePage({ token }) {
   const [error, setError] = useState(false);
   const router = useRouter();
 
+  const baseUrl = process.env.BASE_PATH_API_REVIEW_URL;
+  const generateUrl = process.env.CODE_REVIEW_PATH_API_REVIEW_URL;
+  const version = process.env.API_VERSION;
+
   const handleReview = async () => {
     if (!token) {
       router.push('/'); // Redirect if no token
@@ -28,16 +32,16 @@ export default function HomePage({ token }) {
           },
         ],
       };
-      console.log('token in homepage:', token);
+      // console.log('token in homepage:', token);
 
       const response = await axios.post(
-        'http://localhost:8085/ai-code-review/generate',
+        `${baseUrl}${generateUrl}`,
         requestData,
         {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
-            'X-API-VERSION': 1,
+            'X-API-VERSION': version,
           },
         },
       );
@@ -68,6 +72,7 @@ export default function HomePage({ token }) {
         className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
         onClick={handleReview}
         disabled={loading}
+        type="submit"
       >
         {loading ? 'Reviewing...' : 'Review Code'}
       </button>

@@ -60,6 +60,7 @@ export default function Login({ setToken }) {
         <button
           className="px-4 py-2 bg-blue-300 text-white rounded-md hover:bg-amber-700 cursor-pointer transition ease-in duration-300"
           onClick={handleLogin}
+          type="submit"
         >
           Login
         </button>
