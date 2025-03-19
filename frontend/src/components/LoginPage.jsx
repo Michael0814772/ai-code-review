@@ -1,12 +1,15 @@
 'use-client';
 import axios from 'axios';
 import React, { useState } from 'react';
+import urlConfig from '@/config/urlConfig';
 
 export default function Login({ setToken }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [statusCode, setStatusCode] = useState(200);
+
+  // console.log(`baseUrl: ${urlConfig.baseUrl}, authUrl: ${urlConfig.authUrl}`);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -17,7 +20,7 @@ export default function Login({ setToken }) {
       };
 
       const response = await axios.post(
-        'http://localhost:8085/ai-code-review/auth/login-user',
+        `${urlConfig.baseUrl}${urlConfig.authUrl}`,
         requestData,
         {
           headers: {

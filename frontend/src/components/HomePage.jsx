@@ -3,6 +3,7 @@
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import urlConfig from '@/config/urlConfig';
 
 export default function HomePage({ token }) {
   const [code, setCode] = useState('');
@@ -11,9 +12,9 @@ export default function HomePage({ token }) {
   const [error, setError] = useState(false);
   const router = useRouter();
 
-  const baseUrl = process.env.BASE_PATH_API_REVIEW_URL;
-  const generateUrl = process.env.CODE_REVIEW_PATH_API_REVIEW_URL;
-  const version = process.env.API_VERSION;
+  // console.log(
+  //   `baseUrl: ${urlConfig.baseUrl}, generateUrl: ${urlConfig.generateUrl}, version: ${urlConfig.version}`,
+  // );
 
   const handleReview = async () => {
     if (!token) {
@@ -35,13 +36,13 @@ export default function HomePage({ token }) {
       // console.log('token in homepage:', token);
 
       const response = await axios.post(
-        `${baseUrl}${generateUrl}`,
+        `${urlConfig.baseUrl}${urlConfig.generateUrl}`,
         requestData,
         {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
-            'X-API-VERSION': version,
+            'X-API-VERSION': urlConfig.version,
           },
         },
       );

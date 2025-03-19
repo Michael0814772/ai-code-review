@@ -6,6 +6,7 @@ import org.apache.logging.log4j.core.config.plugins.validation.constraints.NotBl
 import org.springframework.validation.annotation.Validated;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Validated
@@ -13,7 +14,7 @@ public class CodeReviewRequestDto {
 
     @NotBlank
     @Valid
-    private ArrayList<MessageDto> messages  = new ArrayList<>();
+    private List<MessageDto> messages  = new ArrayList<>();
 
     @NotBlank
     private String requestId;

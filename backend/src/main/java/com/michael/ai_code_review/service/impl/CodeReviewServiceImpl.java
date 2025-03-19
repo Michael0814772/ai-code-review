@@ -33,6 +33,15 @@ public class CodeReviewServiceImpl implements CodeReviewService {
     private final OpenAiRequestFactory openAiRequestFactory;
     private final OpenAiResponseMapper openAiResponseMapper;
 
+    /**
+     * Reviews the provided code by sending a request to the OpenAI service and processing the response.
+     *
+     * @param reviewRequestDto the data transfer object containing the code review request details.
+     * @return a ResponseEntity containing the result of the code review. If successful, it contains a
+     *         GenericResponse with the score and recommendations. If an error occurs, it contains an
+     *         error message and an internal server error status.
+     * @throws JsonProcessingException if there is an error processing JSON content.
+     */
     @Override
     public ResponseEntity<?> reviewCode(CodeReviewRequestDto reviewRequestDto) throws JsonProcessingException {
         log.info("request: {}", reviewRequestDto);
@@ -76,6 +85,14 @@ public class CodeReviewServiceImpl implements CodeReviewService {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
+    /**
+     * Cleans up the JSON response message by removing unnecessary characters and formatting.
+     *
+     * @param message the raw JSON response message as a String.
+     * @return a cleaned-up version of the message, with leading and trailing quotes,
+     *         unnecessary newlines, and backslashes removed. If the input message is blank,
+     *         an empty string is returned.
+     */
     private String methodToCleanResponse(String message) {
 
         if (StringUtils.isBlank(message)) {

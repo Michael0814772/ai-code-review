@@ -10,4 +10,8 @@ public class MessageDto {
 
     @NotBlank
     public String content;
+
+    public MessageDto(String content) {
+        this.content = content;
+    }
 }

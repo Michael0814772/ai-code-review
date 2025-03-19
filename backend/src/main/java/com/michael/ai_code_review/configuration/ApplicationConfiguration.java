@@ -1,6 +1,5 @@
 package com.michael.ai_code_review.configuration;
 
-import com.michael.ai_code_review.exception.UserIsNotFoundException;
 import com.michael.ai_code_review.repository.UsersTokenRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
