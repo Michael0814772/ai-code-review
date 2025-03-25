@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import lombok.Data;
 import org.apache.logging.log4j.core.config.plugins.validation.constraints.NotBlank;
 import org.springframework.validation.annotation.Validated;
+import org.wildfly.common.annotation.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +13,9 @@ import java.util.List;
 @Validated
 public class CodeReviewRequestDto {
 
-    @NotBlank
+    @NotNull
     @Valid
-    private List<MessageDto> messages  = new ArrayList<>();
+    private ArrayList<MessageDto> messages  = new ArrayList<>();
 
     @NotBlank
     private String requestId;

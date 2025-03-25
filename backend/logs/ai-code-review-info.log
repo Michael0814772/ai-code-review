@@ -1,16 +1,43 @@
-Inside setup method
-My first test method
-Inside setup method
-My second test method
+Could not detect default configuration classes for test class [com.michael.ai_code_review.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.michael.ai_code_review.Application for test class com.michael.ai_code_review.ApplicationTests
+Restart disabled due to context in which it is running
+HV000001: Hibernate Validator 8.0.1.Final
+Starting ApplicationTests using Java 23.0.2 with PID 22944 (started by Micheal A in C:\Users\Micheal A\ideaProjects\ai-code-review\backend)
+The following 1 profile is active: "postgres"
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 255 ms. Found 1 JPA repository interface.
+Post-processing PropertySource instances
+Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application-postgres.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+HHH000412: Hibernate ORM core version 6.5.2.Final
+HHH000026: Second-level cache disabled
+No LoadTimeWeaver setup: ignoring JPA class transformer
+HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25435731
+HikariPool-1 - Start completed.
+HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate is in classpath; If applicable, HQL parser will be used.
+Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63f79099, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4def8aaa, org.springframework.security.web.context.SecurityContextHolderFilter@73534675, org.springframework.security.web.header.HeaderWriterFilter@14d294f4, org.springframework.web.filter.CorsFilter@43cc7bb7, org.springframework.security.web.authentication.logout.LogoutFilter@b632594, com.michael.ai_code_review.filter.JwtAuthenticationFilter@3c6c87fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b7b6f58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1de78f97, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ffa3cdb, org.springframework.security.web.session.SessionManagementFilter@6ca95b1e, org.springframework.security.web.access.ExceptionTranslationFilter@2162b22d, org.springframework.security.web.access.intercept.AuthorizationFilter@20f1c8ed]
+Started ApplicationTests in 16.297 seconds (process running for 19.813)
+reviewRequestDto - CodeReviewRequestDto(messages=[MessageDto(content=First user message), MessageDto(content=Second user message)], requestId=null)
 openAiRequest - OpenAiRequest(model=gpt-3, store=true, messages=[OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)])
 expectedMessages - [OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)]
-openAiRequest - OpenAiRequest(model=gpt-3, store=true, messages=[OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)])
-expectedMessages - [OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)]
-openAiRequest - OpenAiRequest(model=gpt-3, store=true, messages=[OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)])
-expectedMessages - [OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)]
-openAiRequest - OpenAiRequest(model=gpt-3, store=true, messages=[OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)])
-expectedMessages - [OpenAiMessageDto(role=system, content=System message), OpenAiMessageDto(role=user, content=User message: First user message), OpenAiMessageDto(role=user, content=User message: Second user message)]
-request: CodeReviewRequestDto(messages=[MessageDto(content=Test message)], requestId=null)
-request: CodeReviewRequestDto(messages=[MessageDto(content=Test message)], requestId=null)
-request: CodeReviewRequestDto(messages=[MessageDto(content=Test message)], requestId=null)
-request: CodeReviewRequestDto(messages=[MessageDto(content=Test message)], requestId=null)
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.

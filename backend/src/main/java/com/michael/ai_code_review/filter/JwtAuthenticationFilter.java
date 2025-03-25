@@ -42,7 +42,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         log.info("request path - {}", requestPath);
 
         // Skip JWT authentication for public URLs
-        if (requestPath.startsWith("/auth/")) {
+        if (requestPath.startsWith("/auth/") || requestPath.startsWith("/test")) {
             filterChain.doFilter(request, response);
             return;
         }

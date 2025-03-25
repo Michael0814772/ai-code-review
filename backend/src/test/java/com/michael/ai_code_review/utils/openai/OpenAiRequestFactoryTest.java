@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,10 +40,11 @@ class OpenAiRequestFactoryTest {
         when(openAiRequestProperties.getModel()).thenReturn("gpt-3");
 
         CodeReviewRequestDto reviewRequestDto = new CodeReviewRequestDto();
-        reviewRequestDto.setMessages((List.of(
+        reviewRequestDto.setMessages((new ArrayList<>(List.of(
                 new MessageDto("First user message"),
                 new MessageDto("Second user message")
-        )));
+        ))));
+        log.info("reviewRequestDto - {}", reviewRequestDto);
 
         // Act
         OpenAiRequest openAiRequest = openAiRequestFactory.createRequest(reviewRequestDto);
