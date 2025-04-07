@@ -22,6 +22,6 @@ frontend:
       - node_modules/**/*
       - .next/cache/**/*
 rewrite:
-  - source: /api/<*>
-    target: http://simple-ai-code-review-env.eba-amjy3ssw.us-east-1.elasticbeanstalk.com/<*>
+  - source: /api/ai-code-review/<*>
+    target: http://simple-ai-code-review-env.eba-amjy3ssw.us-east-1.elasticbeanstalk.com/ai-code-review/<*>
     status: 200
