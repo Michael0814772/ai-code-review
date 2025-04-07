@@ -6,6 +6,12 @@ frontend:
         - npm ci
     build:
       commands:
+        - echo "Setting environment variables..."
+        - export NEXT_PUBLIC_BASE_PATH_API_REVIEW_URL=/api/ai-code-review
+        - export NEXT_PUBLIC_CODE_REVIEW_PATH_API_REVIEW_URL=/generate
+        - export NEXT_PUBLIC_API_VERSION=1
+        - export NEXT_PUBLIC_CODE_REVIEW_PATH_API_AUTH_LOGIN_USER_URL=/auth/login-user
+        - export NEXT_PUBLIC_CODE_REVIEW_PATH_API_AUTH_REGISTER_USER_URL=/auth/register-user
         - npm run build
   artifacts:
     baseDirectory: .next
