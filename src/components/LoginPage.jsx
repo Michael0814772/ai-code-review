@@ -24,7 +24,7 @@ export default function Login({ setToken }) {
       console.log(`url for login: ${urlConfig.baseUrl}${urlConfig.authUrl}`);
 
       const response = await axios.post(
-        `${urlConfig.authUrl}`, // Send the request to the authUrl
+        `${urlConfig.baseUrl}${urlConfig.authUrl}`, // Send the request to the authUrl
         requestData,
         {
           headers: {
