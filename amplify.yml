@@ -7,7 +7,7 @@ frontend:
     build:
       commands:
         - echo "Setting environment variables..."
-        - export NEXT_PUBLIC_BASE_PATH_API_REVIEW_URL=/ai-code-review
+        - export NEXT_PUBLIC_BASE_PATH_API_REVIEW_URL=/
         - export NEXT_PUBLIC_CODE_REVIEW_PATH_API_REVIEW_URL=/generate
         - export NEXT_PUBLIC_API_VERSION=1
         - export NEXT_PUBLIC_CODE_REVIEW_PATH_API_AUTH_LOGIN_USER_URL=/auth/login-user
@@ -16,12 +16,10 @@ frontend:
   artifacts:
     baseDirectory: .next
     files:
-      - '**/*'
+      - ['**/*']
   cache:
-    paths:
-      - node_modules/**/*
-      - .next/cache/**/*
+    paths: [node_modules/**/*, .next/cache/**/*]
 rewrite:
-  - source: /ai-code-review/<*>
-    target: http://simple-ai-code-review-env.eba-amjy3ssw.us-east-1.elasticbeanstalk.com/ai-code-review/<*>
+  - source: /<*>
+    target: http://simple-ai-code-review-env.eba-amjy3ssw.us-east-1.elasticbeanstalk.com/<*>
     status: 200
