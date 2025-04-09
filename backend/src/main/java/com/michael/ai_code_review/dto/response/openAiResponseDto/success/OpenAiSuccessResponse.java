@@ -3,7 +3,6 @@ package com.michael.ai_code_review.dto.response.openAiResponseDto.success;
 import lombok.Data;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Data
 public class OpenAiSuccessResponse {

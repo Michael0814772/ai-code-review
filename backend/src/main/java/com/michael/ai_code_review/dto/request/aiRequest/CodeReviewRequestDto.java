@@ -7,7 +7,6 @@ import org.springframework.validation.annotation.Validated;
 import org.wildfly.common.annotation.NotNull;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @Validated

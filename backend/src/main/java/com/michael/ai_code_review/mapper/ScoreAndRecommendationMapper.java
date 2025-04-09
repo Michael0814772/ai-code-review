@@ -3,7 +3,6 @@ package com.michael.ai_code_review.mapper;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 

@@ -23,7 +23,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingRequestHeaderException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import java.util.ArrayList;
@@ -243,7 +242,6 @@ public class GlobalErrorHandler {
     public ResponseEntity<CustomException> handleSecurityException(Exception exception) {
         CustomException errorDetail = new CustomException();
 
-        // TODO send this stack trace to an observability tool
         exception.printStackTrace();
 
         if (exception instanceof BadCredentialsException) {
@@ -270,11 +268,6 @@ public class GlobalErrorHandler {
             errorDetail.setMessage("Token has expired");
             errorDetail.setCode(UNAUTHORIZED_ERROR.getCode());
             return new ResponseEntity<>(errorDetail, HttpStatus.UNAUTHORIZED);
-        }
-
-        if (errorDetail == null) {
-            errorDetail.setMessage("Unknown internal server error.");
-            errorDetail.setCode(INTERNAL_SERVER_ERROR.getCode());
         }
 
         return new ResponseEntity<>(errorDetail, HttpStatus.INTERNAL_SERVER_ERROR);
