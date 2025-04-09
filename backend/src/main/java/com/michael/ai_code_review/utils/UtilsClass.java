@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 
-import static com.michael.ai_code_review.enums.HashMapConst.CONTAINS_ERROR;
 import static com.michael.ai_code_review.enums.ResponseMessage.ERROR_FETCHING_DATA;
 
 @Component

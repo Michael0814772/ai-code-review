@@ -21,10 +21,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
 import static com.michael.ai_code_review.enums.ResponseMessage.SUCCESSFUL_RESPONSE;
 
 @Service
@@ -85,12 +81,6 @@ public class UsersTokenServiceImpl implements UsersTokenService {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @Override
-    public ResponseEntity<List<UsersTokenTable>> allUsers() {
-
-        List<UsersTokenTable> users = new ArrayList<>(usersTokenRepository.findAll());
-        return new ResponseEntity<>(users, HttpStatus.OK);
-    }
 
     private GenericResponse setGenericResponse(LoginResponseDto loginResponseDto) {
 

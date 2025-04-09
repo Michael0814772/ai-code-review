@@ -6,6 +6,7 @@ import com.michael.ai_code_review.dto.request.user.LoginUserDto;
 import com.michael.ai_code_review.dto.request.user.RegisterUserDto;
 import com.michael.ai_code_review.model.UsersTokenTable;
 import com.michael.ai_code_review.service.service.CodeReviewService;
+import com.michael.ai_code_review.service.service.UserManagementService;
 import com.michael.ai_code_review.service.service.UsersTokenService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,7 @@ public class CodeReviewController {
 
     private final CodeReviewService reviewService;
     private final UsersTokenService usersTokenService;
+    private final UserManagementService userManagementService;
 
     @PostMapping(path = "/generate", headers = "X-API-VERSION=1")
     public ResponseEntity<?> reviewCode(@Valid @RequestBody CodeReviewRequestDto code) throws JsonProcessingException {
@@ -56,7 +58,7 @@ public class CodeReviewController {
 
     @GetMapping(path = "/fetch-users", headers = "X-API-VERSION=1")
     public ResponseEntity<List<UsersTokenTable>> allUsers() {
-        return usersTokenService.allUsers();
+        return userManagementService.allUsers();
     }
 
     @GetMapping(path = "/")
