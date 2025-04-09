@@ -1,12 +1,14 @@
 'use client';
-import { RegisterPage } from '@/components/RegisterPage';
+
+import RegisterPage from '@/components/RegisterPage';
+import MainLayout from '@/components/layouts/MainLayout';
 import React from 'react';
 
 const page = () => {
   return (
-    <div>
+    <MainLayout>
       <RegisterPage />
-    </div>
+    </MainLayout>
   );
 };
 

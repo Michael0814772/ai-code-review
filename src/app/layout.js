@@ -13,12 +13,28 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: 'AI Code Review',
-  description: 'AI Code Review',
+  description: 'AI-powered code review tool',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.getItem('theme') === 'dark' ||
+                    (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
       <body
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
