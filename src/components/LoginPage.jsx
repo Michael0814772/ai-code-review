@@ -1,31 +1,28 @@
-'use-client';
+'use client';
+
 import axios from 'axios';
 import React, { useState } from 'react';
 import urlConfig from '@/config/urlConfig';
 import { useRouter } from 'next/navigation';
+import Input from './ui/Input';
+import Button from './ui/Button';
 
 export default function Login({ setToken }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const [statusCode, setStatusCode] = useState(200);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-
-  // console.log(`baseUrl: ${urlConfig.baseUrl}, authUrl: ${urlConfig.authUrl}`);
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
     try {
-      const requestData = {
-        email: email,
-        password: password,
-      };
-
-      console.log(`url for login: ${urlConfig.baseUrl}${urlConfig.authUrl}`);
-
       const response = await axios.post(
-        `${urlConfig.baseUrl}${urlConfig.authUrl}`, // Send the request to the authUrl
-        requestData,
+        `${urlConfig.baseUrl}${urlConfig.authUrl}`,
+        { email, password },
         {
           headers: {
             'Content-Type': 'application/json',
@@ -34,63 +31,65 @@ export default function Login({ setToken }) {
         },
       );
       const token = response?.data.data.token;
-      setToken(token); // Pass the token to the parent component
+      setToken(token);
     } catch (error) {
-      setStatusCode(error.response?.status);
       setError(error.response?.data || error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const handleRegister = async (e) => {
-    router.push('/register'); // Redirect to register page
-    return;
-  };
-
   return (
-    <div className="flex flex-col gap-5 items-center p-6">
-      <div className="w-5/12 lg:w-4/12">
-        <h1 className="text-2xl font-bold mb-4">Login</h1>
-        <input
-          type="text"
-          placeholder="Username/email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 border rounded-lg mb-4"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 border rounded-lg mb-4"
-        />
-        {error && (
-          <div className="text-red-500 mb-4">
-            Error: {error.message || 'User not found.'}
-          </div>
-        )}
-        <div className="flex justify-between items-center ">
-          <button
-            className="px-4 py-2 bg-blue-300 text-white rounded-md hover:bg-amber-700 cursor-pointer transition ease-in duration-300"
-            onClick={handleLogin}
-            type="submit"
-          >
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="flex flex-col items-center p-6">
+        <div className="w-full max-w-md space-y-6">
+          <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white">
             Login
-          </button>
+          </h1>
+          
+          <form onSubmit={handleLogin} className="space-y-4">
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email address"
+              disabled={isLoading}
+            />
+            
+            <Input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              disabled={isLoading}
+            />
 
-          <p>OR</p>
+            {error && (
+              <div className="text-red-500 dark:text-red-400 text-sm">
+                {error.message || 'Invalid credentials'}
+              </div>
+            )}
 
-          <button
-            className="px-4 py-2 cursor-pointer"
-            onClick={handleRegister}
-            type="submit"
-          >
-            Register
-          </button>
+            <div className="flex justify-between items-center gap-4">
+              <Button
+                type="submit"
+                isLoading={isLoading}
+                disabled={!email || !password}
+              >
+                Login
+              </Button>
+
+              <Button
+                variant="secondary"
+                onClick={() => router.push('/register')}
+                disabled={isLoading}
+              >
+                Register
+              </Button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   );
 }
-
-// export default Login;

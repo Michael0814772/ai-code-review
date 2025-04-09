@@ -1,12 +1,14 @@
 'use client';
-import Login from '@/components/LoginPage';
+
+import LoginPage from '@/components/LoginPage';
+import MainLayout from '@/components/layouts/MainLayout';
 import React from 'react';
 
 const page = () => {
   return (
-    <div>
-      <Login />
-    </div>
+    <MainLayout>
+      <LoginPage />
+    </MainLayout>
   );
 };
 
